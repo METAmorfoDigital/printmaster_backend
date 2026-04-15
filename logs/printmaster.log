@@ -39,7 +39,7 @@
         cantidad_planchado decimal(38,2),
         cliente varchar(255) not null,
         correlativo integer not null,
-        costo_diseño decimal(38,2),
+        costo_diseï¿½o decimal(38,2),
         costo_impresion decimal(38,2),
         costo_insignias decimal(38,2),
         costo_planchado decimal(38,2),
@@ -1096,7 +1096,7 @@ Caused by: org.springframework.data.core.PropertyReferenceException: No property
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -1447,7 +1447,7 @@ Caused by: org.springframework.data.core.PropertyReferenceException: No property
     insert 
     into
         ordenes_produccion
-        (anio, banco, cantidad_insignias, cantidad_planchado, cliente, correlativo, costo_diseño, costo_impresion, costo_insignias, costo_planchado, created_at, fecha, fecha_pago, metraje, rollo_id, subtotal_impresion, subtotal_insignias, subtotal_planchado, tipo_pago, total, updated_at, tipo_trabajo) 
+        (anio, banco, cantidad_insignias, cantidad_planchado, cliente, correlativo, costo_diseï¿½o, costo_impresion, costo_insignias, costo_planchado, created_at, fecha, fecha_pago, metraje, rollo_id, subtotal_impresion, subtotal_insignias, subtotal_planchado, tipo_pago, total, updated_at, tipo_trabajo) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'DTF')
 2026-04-09 12:22:35.433 [http-nio-8080-exec-2] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
@@ -1495,7 +1495,7 @@ Caused by: org.springframework.data.core.PropertyReferenceException: No property
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -1537,7 +1537,7 @@ Caused by: org.springframework.data.core.PropertyReferenceException: No property
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -1579,7 +1579,7 @@ Caused by: org.springframework.data.core.PropertyReferenceException: No property
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -1771,7 +1771,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2047,7 +2047,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2211,7 +2211,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2253,7 +2253,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2343,7 +2343,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
     insert 
     into
         ordenes_produccion
-        (anio, banco, cantidad_insignias, cantidad_planchado, cliente, correlativo, costo_diseño, costo_impresion, costo_insignias, costo_planchado, created_at, fecha, fecha_pago, metraje, rollo_id, subtotal_impresion, subtotal_insignias, subtotal_planchado, tipo_pago, total, updated_at, tipo_trabajo) 
+        (anio, banco, cantidad_insignias, cantidad_planchado, cliente, correlativo, costo_diseï¿½o, costo_impresion, costo_insignias, costo_planchado, created_at, fecha, fecha_pago, metraje, rollo_id, subtotal_impresion, subtotal_insignias, subtotal_planchado, tipo_pago, total, updated_at, tipo_trabajo) 
     values
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'DTF')
 2026-04-09 12:27:08.615 [http-nio-8080-exec-4] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
@@ -2391,7 +2391,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2433,7 +2433,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2597,7 +2597,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2639,7 +2639,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2681,7 +2681,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -2873,7 +2873,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -3065,7 +3065,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -3107,7 +3107,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -3149,7 +3149,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -3368,7 +3368,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -3531,7 +3531,7 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
         op1_0.cantidad_planchado,
         op1_0.cliente,
         op1_0.correlativo,
-        op1_0.costo_diseño,
+        op1_0.costo_diseï¿½o,
         op1_0.costo_impresion,
         op1_0.costo_insignias,
         op1_0.costo_planchado,
@@ -3673,3 +3673,4063 @@ org.hibernate.LazyInitializationException: could not initialize proxy [com.bpm.p
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:840)
+    2026-04-15 13:12:54.107 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-15 13:12:54.152 [main] INFO  c.b.p.PrintmasterErpApplication - Starting PrintmasterErpApplication using Java 17.0.17 with PID 6252 (D:\Desktop\Proyectos\BPM bolivia print master\printmaster-erp\build\classes\java\main started by SAMUEL in D:\Desktop\Proyectos\BPM bolivia print master\printmaster-erp)
+2026-04-15 13:12:54.152 [main] INFO  c.b.p.PrintmasterErpApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 13:12:54.850 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 13:12:54.944 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 7 JPA repository interfaces.
+2026-04-15 13:12:55.522 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 13:12:55.522 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-15 13:12:55.538 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 13:12:55.538 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-04-15 13:12:55.585 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 13:12:55.585 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1396 ms
+2026-04-15 13:12:55.710 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 13:12:55.772 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-04-15 13:12:55.803 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 13:12:56.086 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 13:12:56.117 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 13:12:56.289 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cadcff6
+2026-04-15 13:12:56.289 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 13:12:57.264 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 13:12:57.358 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 13:12:57.671 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-15 13:12:57.671 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-04-15 13:12:57.777 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 13:12:58.521 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-15 13:12:58.537 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-15 13:12:58.537 [main] INFO  c.b.p.PrintmasterErpApplication - Started PrintmasterErpApplication in 4.834 seconds (process running for 5.152)
+2026-04-15 13:14:59.260 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-15 13:14:59.260 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-15 13:14:59.260 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-04-15 13:14:59.359 [http-nio-8080-exec-3] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:14:59.515 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:09.934 [http-nio-8080-exec-2] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:15:09.935 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:24.229 [http-nio-8080-exec-6] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:15:24.229 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:28.030 [http-nio-8080-exec-7] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:15:28.030 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:28.108 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:28.141 [http-nio-8080-exec-7] INFO  c.b.p.auth.controller.AuthController - Login exitoso: Samm con rol ADMIN
+2026-04-15 13:15:38.341 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:38.358 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:15:47.513 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:47.513 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:15:50.632 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:50.632 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:15:52.896 [http-nio-8080-exec-9] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:15:52.897 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:15:58.829 [http-nio-8080-exec-7] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:15:58.829 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:16:02.962 [http-nio-8080-exec-8] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:16:02.962 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:16:07.485 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:16:07.491 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:16:11.277 [http-nio-8080-exec-1] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:16:11.277 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:16:16.261 [http-nio-8080-exec-4] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:16:16.261 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:17:17.306 [http-nio-8080-exec-7] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:17:17.306 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:17:26.631 [http-nio-8080-exec-5] INFO  c.b.p.auth.controller.AuthController - Intento de login: Mael
+2026-04-15 13:17:26.633 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:17:43.857 [http-nio-8080-exec-1] INFO  c.b.p.auth.controller.AuthController - Intento de login: admin
+2026-04-15 13:17:43.857 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:18:47.138 [http-nio-8080-exec-2] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:18:47.138 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:18:57.157 [http-nio-8080-exec-6] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:18:57.157 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:19:01.671 [http-nio-8080-exec-7] INFO  c.b.p.auth.controller.AuthController - Intento de login: Mael
+2026-04-15 13:19:01.671 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:20:10.680 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-15 13:20:10.712 [main] INFO  c.b.p.PrintmasterErpApplication - Starting PrintmasterErpApplication using Java 17.0.17 with PID 6700 (D:\Desktop\Proyectos\BPM bolivia print master\printmaster-erp\build\classes\java\main started by SAMUEL in D:\Desktop\Proyectos\BPM bolivia print master\printmaster-erp)
+2026-04-15 13:20:10.712 [main] INFO  c.b.p.PrintmasterErpApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 13:20:11.183 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 13:20:11.261 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 7 JPA repository interfaces.
+2026-04-15 13:20:11.731 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 13:20:11.746 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-15 13:20:11.746 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 13:20:11.746 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-04-15 13:20:11.800 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 13:20:11.800 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1056 ms
+2026-04-15 13:20:11.894 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 13:20:11.925 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-04-15 13:20:11.956 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 13:20:12.175 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 13:20:12.207 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 13:20:12.316 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15d58530
+2026-04-15 13:20:12.316 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 13:20:13.164 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 13:20:13.212 [main] DEBUG org.hibernate.SQL - 
+    create table users (
+        id bigint not null auto_increment,
+        enabled bit not null,
+        password varchar(255) not null,
+        role enum ('ADMIN','OPERADOR','USER'),
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+2026-04-15 13:20:13.227 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       drop index UKr43af9ap4edm43mmtq01oddj6
+2026-04-15 13:20:13.243 [main] DEBUG org.hibernate.SQL - 
+    alter table users 
+       add constraint UKr43af9ap4edm43mmtq01oddj6 unique (username)
+2026-04-15 13:20:13.337 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 13:20:13.618 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-15 13:20:13.618 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-04-15 13:20:13.727 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 13:20:14.417 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-15 13:20:14.433 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-15 13:20:14.433 [main] INFO  c.b.p.PrintmasterErpApplication - Started PrintmasterErpApplication in 4.085 seconds (process running for 4.346)
+2026-04-15 13:20:27.664 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-15 13:20:27.664 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-15 13:20:27.665 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-15 13:20:42.418 [http-nio-8080-exec-7] INFO  c.b.p.auth.controller.AuthController - Registro de nuevo usuario: Samm
+2026-04-15 13:20:42.501 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:20:42.604 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (enabled, password, role, username) 
+    values
+        (?, ?, ?, ?)
+2026-04-15 13:20:58.552 [http-nio-8080-exec-8] INFO  c.b.p.auth.controller.AuthController - Registro de nuevo usuario: Mael
+2026-04-15 13:20:58.552 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:20:58.634 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        users
+        (enabled, password, role, username) 
+    values
+        (?, ?, ?, ?)
+2026-04-15 13:21:01.373 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Intento de login: Mael
+2026-04-15 13:21:01.450 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:01.517 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:01.534 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Login exitoso: Mael con rol OPERADOR
+2026-04-15 13:21:03.364 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:03.367 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:21:07.062 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:07.084 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:21:14.969 [http-nio-8080-exec-6] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:21:14.969 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:15.050 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:15.050 [http-nio-8080-exec-6] INFO  c.b.p.auth.controller.AuthController - Login exitoso: Samm con rol ADMIN
+2026-04-15 13:21:32.402 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:32.409 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:21:36.247 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:21:36.249 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:36.323 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:36.325 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Login exitoso: Samm con rol ADMIN
+2026-04-15 13:21:41.074 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:41.074 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:41.074 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:41.080 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        t1_0.id,
+        t1_0.cantidad,
+        t1_0.created_at,
+        t1_0.nombre,
+        t1_0.precio,
+        t1_0.proveedor_id,
+        t1_0.updated_at,
+        t1_0.color,
+        t1_0.marca,
+        t1_0.tipo_tinta_id 
+    from
+        material t1_0 
+    where
+        t1_0.tipo_material='TINTA'
+2026-04-15 13:21:41.080 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:21:41.081 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:21:43.482 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:43.488 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:43.488 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:43.490 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:21:43.494 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:21:43.494 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:21:50.527 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:50.535 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:21:50.551 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        material 
+    where
+        id=?
+2026-04-15 13:21:50.551 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2026-04-15 13:21:50.551 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+2026-04-15 13:21:50.569 [http-nio-8080-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))] [delete from material where id=?]; SQL [delete from material where id=?]; constraint [null]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:633)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:500)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:385)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy153.deleteById(Unknown Source)
+	at com.bpm.printmaster.inventory.service.RolloService.delete(RolloService.java:48)
+	at com.bpm.printmaster.inventory.controller.RolloController.delete(RolloController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.bpm.printmaster.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:79)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-15 13:21:52.803 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:21:52.807 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:22:00.473 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:00.480 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:22:00.490 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:00.495 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:22:02.727 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:02.734 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:22:05.976 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:05.983 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:22:06.676 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:06.682 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:22:08.759 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:08.766 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:22:10.765 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:10.769 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:22:15.299 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:15.299 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:22:15.919 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:15.919 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:22:19.957 [http-nio-8080-exec-2] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:22:19.957 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:20.032 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:22:20.032 [http-nio-8080-exec-2] INFO  c.b.p.auth.controller.AuthController - Login exitoso: Samm con rol ADMIN
+2026-04-15 13:23:04.374 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:04.382 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:23:05.572 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:05.572 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:23:09.882 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:09.882 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:09.886 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:09.887 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:23:09.887 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:23:09.892 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:23:12.098 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:12.098 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:23:12.098 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        material 
+    where
+        id=?
+2026-04-15 13:23:12.098 [http-nio-8080-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2026-04-15 13:23:12.098 [http-nio-8080-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+2026-04-15 13:23:12.114 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))] [delete from material where id=?]; SQL [delete from material where id=?]; constraint [null]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:633)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:500)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:385)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy153.deleteById(Unknown Source)
+	at com.bpm.printmaster.inventory.service.RolloService.delete(RolloService.java:48)
+	at com.bpm.printmaster.inventory.controller.RolloController.delete(RolloController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.bpm.printmaster.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:79)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-15 13:23:16.141 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:16.149 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:23:16.149 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        material 
+    where
+        id=?
+2026-04-15 13:23:16.149 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2026-04-15 13:23:16.149 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+2026-04-15 13:23:16.149 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))] [delete from material where id=?]; SQL [delete from material where id=?]; constraint [null]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:633)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:500)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:385)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy153.deleteById(Unknown Source)
+	at com.bpm.printmaster.inventory.service.RolloService.delete(RolloService.java:48)
+	at com.bpm.printmaster.inventory.controller.RolloController.delete(RolloController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.bpm.printmaster.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:79)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-15 13:23:31.915 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:31.918 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:31.920 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:31.921 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:23:31.931 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:23:31.937 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:23:35.994 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:23:36.001 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:23:36.003 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    delete 
+    from
+        material 
+    where
+        id=?
+2026-04-15 13:23:36.005 [http-nio-8080-exec-7] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1451, SQLState: 23000
+2026-04-15 13:23:36.005 [http-nio-8080-exec-7] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+2026-04-15 13:23:36.006 [http-nio-8080-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))] [delete from material where id=?]; SQL [delete from material where id=?]; constraint [null]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`printmaster_erp`.`ordenes_produccion`, CONSTRAINT `FK68urllqbpujx87r4sofvcrkxu` FOREIGN KEY (`rollo_id`) REFERENCES `material` (`id`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.doStaticDelete(AbstractDeleteCoordinator.java:279)
+	at org.hibernate.persister.entity.mutation.AbstractDeleteCoordinator.delete(AbstractDeleteCoordinator.java:87)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:633)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:500)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:385)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1425)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:487)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2324)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1981)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:663)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:413)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy153.deleteById(Unknown Source)
+	at com.bpm.printmaster.inventory.service.RolloService.delete(RolloService.java:48)
+	at com.bpm.printmaster.inventory.controller.RolloController.delete(RolloController.java:30)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.bpm.printmaster.config.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:79)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-04-15 13:29:26.634 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:29:26.762 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:30:43.795 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:30:43.859 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:30:46.364 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:30:46.366 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:30:46.366 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:30:46.379 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:30:46.379 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:30:46.409 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:37:20.695 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:20.699 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:20.701 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:20.712 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:37:20.712 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:37:20.729 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:37:22.508 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:22.510 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:22.514 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:22.522 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:37:22.527 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:37:22.532 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:37:24.512 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:24.512 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:24.517 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:24.537 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:37:24.540 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:37:24.562 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:37:43.486 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:43.487 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:43.490 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:43.518 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:37:43.518 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:37:43.596 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:37:53.499 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:53.500 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:53.506 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:37:53.512 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:37:53.514 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:37:53.535 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:38:23.551 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:38:23.551 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:38:23.551 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:38:23.563 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:38:23.566 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:38:23.576 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:38:34.850 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:38:34.860 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:38:59.262 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:38:59.625 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:38:59.700 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        max(op1_0.correlativo) 
+    from
+        ordenes_produccion op1_0 
+    where
+        op1_0.anio=? 
+        and op1_0.tipo_trabajo=?
+2026-04-15 13:38:59.940 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        ordenes_produccion
+        (anio, banco, cantidad_insignias, cantidad_planchado, cliente, correlativo, costo_diseno, costo_impresion, costo_insignias, costo_planchado, created_at, fecha, fecha_pago, metraje, rollo_id, subtotal_impresion, subtotal_insignias, subtotal_planchado, tipo_pago, total, updated_at, tipo_trabajo) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'DTF_PLUS')
+2026-04-15 13:39:03.264 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Intento de login: Samm
+2026-04-15 13:39:03.267 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:03.353 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:03.358 [http-nio-8080-exec-10] INFO  c.b.p.auth.controller.AuthController - Login exitoso: Samm con rol ADMIN
+2026-04-15 13:39:08.505 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:08.520 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:39:09.508 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:09.519 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:39:10.506 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:10.513 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        op1_0.id,
+        op1_0.tipo_trabajo,
+        op1_0.anio,
+        op1_0.banco,
+        op1_0.cantidad_insignias,
+        op1_0.cantidad_planchado,
+        op1_0.cliente,
+        op1_0.correlativo,
+        op1_0.costo_diseno,
+        op1_0.costo_impresion,
+        op1_0.costo_insignias,
+        op1_0.costo_planchado,
+        op1_0.created_at,
+        op1_0.fecha,
+        op1_0.fecha_pago,
+        op1_0.metraje,
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id,
+        op1_0.subtotal_impresion,
+        op1_0.subtotal_insignias,
+        op1_0.subtotal_planchado,
+        op1_0.tipo_pago,
+        op1_0.total,
+        op1_0.updated_at 
+    from
+        ordenes_produccion op1_0 
+    left join
+        (select
+            * 
+        from
+            material t 
+        where
+            t.tipo_material='ROLLO') r1_0 
+            on r1_0.id=op1_0.rollo_id 
+    where
+        op1_0.tipo_trabajo=? 
+    order by
+        op1_0.correlativo desc
+2026-04-15 13:39:22.931 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:22.937 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:39:24.703 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:24.705 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:24.705 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:39:24.712 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:39:24.712 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:39:24.714 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:39:57.697 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:41:11.510 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:41:11.512 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:41:11.515 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:41:11.522 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:41:11.524 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:41:11.528 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:41:17.037 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:44:31.456 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:44:31.456 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:44:31.462 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:44:31.470 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:44:31.472 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:44:31.475 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:44:35.267 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:48:34.524 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:48:34.531 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:48:34.536 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:48:34.536 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:48:34.541 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:48:34.547 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:48:41.500 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:41.535 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:41.537 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:41.539 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:41.546 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:50:41.548 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:50:41.549 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:50:46.477 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:46.481 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:46.482 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:50:46.489 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:50:46.492 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:50:46.493 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:54:03.974 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-04-15 13:54:04.012 [main] INFO  c.b.p.PrintmasterErpApplication - Starting PrintmasterErpApplication using Java 17.0.17 with PID 12712 (D:\Desktop\Proyectos\BPM bolivia print master\printmaster-erp\build\classes\java\main started by SAMUEL in D:\Desktop\Proyectos\BPM bolivia print master\printmaster-erp)
+2026-04-15 13:54:04.012 [main] INFO  c.b.p.PrintmasterErpApplication - No active profile set, falling back to 1 default profile: "default"
+2026-04-15 13:54:04.508 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-15 13:54:04.570 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 7 JPA repository interfaces.
+2026-04-15 13:54:05.084 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-15 13:54:05.084 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-15 13:54:05.084 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-15 13:54:05.084 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-04-15 13:54:05.146 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-15 13:54:05.147 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1101 ms
+2026-04-15 13:54:05.252 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-04-15 13:54:05.285 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-04-15 13:54:05.317 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-04-15 13:54:05.549 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-15 13:54:05.564 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-15 13:54:05.695 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@654b899f
+2026-04-15 13:54:05.697 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-15 13:54:06.636 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-15 13:54:06.757 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-15 13:54:07.098 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-15 13:54:07.099 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2026-04-15 13:54:07.210 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-15 13:54:08.187 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-15 13:54:08.195 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-15 13:54:08.210 [main] INFO  c.b.p.PrintmasterErpApplication - Started PrintmasterErpApplication in 4.624 seconds (process running for 4.882)
+2026-04-15 13:54:27.469 [http-nio-8080-exec-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-15 13:54:27.470 [http-nio-8080-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-15 13:54:27.473 [http-nio-8080-exec-6] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-04-15 13:54:27.690 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:54:27.690 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:54:27.690 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:54:27.722 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 13:54:27.731 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo
+2026-04-15 13:54:27.734 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 13:54:30.523 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 13:54:30.537 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:54:30.547 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO' 
+        and r1_0.id=?
+2026-04-15 13:54:30.586 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - 
+    update
+        material 
+    set
+        cantidad=?,
+        nombre=?,
+        precio=?,
+        proveedor_id=?,
+        updated_at=?,
+        ancho=?,
+        largo=?,
+        marca=?,
+        tipo_rollo_id=? 
+    where
+        id=?
+2026-04-15 14:30:08.731 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m2s134ms773µs100ns).
+2026-04-15 14:32:42.167 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 14:32:42.167 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 14:32:42.167 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.id,
+        u1_0.enabled,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2026-04-15 14:32:42.439 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.created_at,
+        p1_0.direccion,
+        p1_0.email,
+        p1_0.nombre,
+        p1_0.telefono,
+        p1_0.updated_at 
+    from
+        proveedores p1_0 
+    where
+        p1_0.activo
+2026-04-15 14:32:42.443 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.id,
+        r1_0.cantidad,
+        r1_0.created_at,
+        r1_0.nombre,
+        r1_0.precio,
+        r1_0.proveedor_id,
+        r1_0.updated_at,
+        r1_0.ancho,
+        r1_0.largo,
+        r1_0.marca,
+        r1_0.tipo_rollo_id 
+    from
+        material r1_0 
+    where
+        r1_0.tipo_material='ROLLO'
+2026-04-15 14:32:42.444 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        tm1_0.id,
+        tm1_0.activo,
+        tm1_0.categoria,
+        tm1_0.created_at,
+        tm1_0.descripcion,
+        tm1_0.updated_at,
+        tm1_0.valor 
+    from
+        tablas_maestras tm1_0 
+    where
+        tm1_0.categoria=? 
+        and tm1_0.activo

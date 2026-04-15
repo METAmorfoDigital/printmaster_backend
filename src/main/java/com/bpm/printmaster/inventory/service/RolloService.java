@@ -61,4 +61,18 @@ public class RolloService {
                 .proveedorId(r.getProveedor() != null ? r.getProveedor().getId() : null)
                 .build();
     }
+
+    public RolloDTO agregarStock(Long id, Integer cantidad) {
+    Rollo rollo = rolloRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Rollo no encontrado"));
+
+    if (cantidad == null || cantidad <= 0) {
+        throw new RuntimeException("La cantidad debe ser mayor a 0");
+    }
+
+    Integer actual = rollo.getCantidad() != null ? rollo.getCantidad() : 0;
+    rollo.setCantidad(actual + cantidad);
+
+    return toDTO(rolloRepository.save(rollo));
+}
 }

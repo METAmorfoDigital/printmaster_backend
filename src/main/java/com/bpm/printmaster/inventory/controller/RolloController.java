@@ -26,8 +26,20 @@ public class RolloController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
+public ResponseEntity<?> delete(@PathVariable Long id) {
+    try {
         rolloService.delete(id);
         return ResponseEntity.noContent().build();
+    } catch (RuntimeException e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
     }
+}
+
+    @PutMapping("/{id}/stock")
+public ResponseEntity<RolloDTO> agregarStock(
+        @PathVariable Long id,
+        @RequestParam Integer cantidad) {
+
+    return ResponseEntity.ok(rolloService.agregarStock(id, cantidad));
+}
 }
