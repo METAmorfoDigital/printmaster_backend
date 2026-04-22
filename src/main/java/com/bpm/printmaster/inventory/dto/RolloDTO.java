@@ -20,6 +20,8 @@ public class RolloDTO {
     @NotBlank(message = "Marca requerida")
     private String marca;
 
+    private String codigo;
+    private BigDecimal metrosDisponibles;
 
     @NotNull(message = "Precio requerido")
     private BigDecimal precio;

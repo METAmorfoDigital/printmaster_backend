@@ -7,6 +7,7 @@ import com.bpm.printmaster.produccion.entity.*;
 import com.bpm.printmaster.produccion.repository.OrdenProduccionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import com.bpm.printmaster.inventory.service.RolloService;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ public class OrdenProduccionService {
 
     private final OrdenProduccionRepository ordenRepository;
     private final RolloRepository rolloRepository;
+    private final RolloService rolloService;
 
     // ── Listar por tipo ──
   
@@ -54,14 +56,18 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
         orden.setCostoImpresion(dto.getCostoImpresion());
         orden.setCantidadPlanchado(dto.getCantidadPlanchado());
         orden.setCostoPlanchado(dto.getCostoPlanchado());
-        orden.setCantidadInsignias(dto.getCantidadInsignias());
-        orden.setCostoInsignias(dto.getCostoInsignias());
+
         orden.setCostoDiseno(dto.getCostoDiseno());
 
         // ── Pago ──
         orden.setTipoPago(dto.getTipoPago());
         orden.setBanco(dto.getBanco());
         orden.setFechaPago(dto.getFechaPago());
+
+        // ← AGREGAR: descuenta metros del rollo
+        if (dto.getMetraje() != null) {
+            rolloService.descontarMetros(dto.getRolloId(), dto.getMetraje());
+        }
 
         return toDTO(ordenRepository.save(orden));
     }
@@ -84,6 +90,7 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
             case "DTF"       -> new OrdenDTF();
             case "DTF_PLUS"  -> new OrdenDTFPlus();
             case "SUBLIMADO" -> new OrdenSublimado();
+            case "INSIGNIAS_T" -> new OrdenInsigniasTexturizadas();
             default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
         };
     }
@@ -110,9 +117,7 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
             .cantidadPlanchado(o.getCantidadPlanchado())
             .costoPlanchado(o.getCostoPlanchado())
             .subtotalPlanchado(o.getSubtotalPlanchado())
-            .cantidadInsignias(o.getCantidadInsignias())
-            .costoInsignias(o.getCostoInsignias())
-            .subtotalInsignias(o.getSubtotalInsignias())
+
             .costoDiseno(o.getCostoDiseno())
             .total(o.getTotal())
             .tipoPago(o.getTipoPago())

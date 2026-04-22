@@ -25,6 +25,18 @@ public class TintaController {
         return ResponseEntity.ok(tintaService.save(dto));
     }
 
+   @PutMapping("/{id}")
+public ResponseEntity<TintaDTO> update(
+        @PathVariable Long id,
+        @RequestBody TintaDTO dto) {  // ← sin @Valid
+    return ResponseEntity.ok(tintaService.update(id, dto));
+}
+
+    @PutMapping("/{id}/descontar")
+    public ResponseEntity<TintaDTO> descontar(@PathVariable Long id) {
+        return ResponseEntity.ok(tintaService.descontarStock(id));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         tintaService.delete(id);
