@@ -17,6 +17,8 @@ public class TintaDTO {
     @NotNull(message = "Precio requerido")
     private BigDecimal precio;
 
+    private Integer cantidadAgregar; // se suma al stock existente
+
     @NotNull(message = "Cantidad requerida")
     @Min(value = 0)
     private Integer cantidad;

@@ -26,4 +26,12 @@ List<OrdenProduccion> findByTipo(@Param("tipo") Class<?> tipo);
         @Param("anio") Integer anio,
         @Param("tipo") Class<?> tipo
     );
+
+    @Query("""
+    SELECT o FROM OrdenProduccion o
+    LEFT JOIN FETCH o.rollo
+    WHERE o.rollo.id = :rolloId
+    ORDER BY o.fecha DESC
+""")
+List<OrdenProduccion> findByRolloId(@Param("rolloId") Long rolloId);
 }

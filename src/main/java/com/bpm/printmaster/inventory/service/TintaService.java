@@ -48,6 +48,29 @@ public class TintaService {
         tintaRepository.deleteById(id);
     }
 
+    public TintaDTO update(Long id, TintaDTO dto) {
+    Tinta tinta = tintaRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Tinta no encontrada"));
+
+    if (dto.getPrecio() != null)
+        tinta.setPrecio(dto.getPrecio());
+
+    if (dto.getCantidadAgregar() != null && dto.getCantidadAgregar() > 0)
+        tinta.setCantidad(tinta.getCantidad() + dto.getCantidadAgregar());
+
+    return toDTO(tintaRepository.save(tinta));
+}
+
+    public TintaDTO descontarStock(Long id) {
+        Tinta tinta = tintaRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Tinta no encontrada"));
+
+        if (tinta.getCantidad() <= 0)
+            throw new RuntimeException("Sin stock disponible");
+
+        tinta.setCantidad(tinta.getCantidad() - 1);
+        return toDTO(tintaRepository.save(tinta));
+    }
     private TintaDTO toDTO(Tinta t) {
         return TintaDTO.builder()
                 .id(t.getId())

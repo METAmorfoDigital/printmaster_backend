@@ -44,9 +44,7 @@ public abstract class OrdenProduccion extends Auditable {
     private BigDecimal costoPlanchado;
     private BigDecimal subtotalPlanchado;
 
-    private BigDecimal cantidadInsignias;
-    private BigDecimal costoInsignias;
-    private BigDecimal subtotalInsignias;
+
 
     private BigDecimal costoDiseno;
 
@@ -69,12 +67,10 @@ public abstract class OrdenProduccion extends Auditable {
     public void calcularTotales() {
         this.subtotalImpresion = safeMultiply(metraje, costoImpresion);
         this.subtotalPlanchado = safeMultiply(cantidadPlanchado, costoPlanchado);
-        this.subtotalInsignias = safeMultiply(cantidadInsignias, costoInsignias);
         
         BigDecimal diseño = (costoDiseno != null) ? costoDiseno : BigDecimal.ZERO;
 
         this.total = subtotalImpresion.add(subtotalPlanchado)
-                                      .add(subtotalInsignias)
                                       .add(diseño);
     }
 

@@ -1,6 +1,7 @@
 package com.bpm.printmaster.inventory.controller;
 
 import com.bpm.printmaster.inventory.dto.RolloDTO;
+import com.bpm.printmaster.inventory.dto.RolloReporteDTO;
 import com.bpm.printmaster.inventory.service.RolloService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -33,6 +34,10 @@ public ResponseEntity<?> delete(@PathVariable Long id) {
     } catch (RuntimeException e) {
         return ResponseEntity.badRequest().body(e.getMessage());
     }
+}
+@GetMapping("/{id}/reporte")
+public ResponseEntity<RolloReporteDTO> getReporte(@PathVariable Long id) {
+    return ResponseEntity.ok(rolloService.getReporte(id));
 }
 
     @PutMapping("/{id}/stock")
