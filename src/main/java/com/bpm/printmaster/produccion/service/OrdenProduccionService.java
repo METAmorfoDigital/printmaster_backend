@@ -3,6 +3,9 @@ package com.bpm.printmaster.produccion.service;
 import com.bpm.printmaster.inventory.entity.Rollo;
 import com.bpm.printmaster.inventory.repository.RolloRepository;
 import com.bpm.printmaster.produccion.dto.OrdenProduccionDTO;
+import com.bpm.printmaster.produccion.dto.DetalleInsigniaDTO;
+import com.bpm.printmaster.produccion.dto.OrdenInsigniaRequestDTO;
+import com.bpm.printmaster.produccion.dto.OrdenInsigniaResponseDTO;
 import com.bpm.printmaster.produccion.entity.*;
 import com.bpm.printmaster.produccion.repository.OrdenProduccionRepository;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +32,7 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
     Class<?> tipoClase = obtenerClase(tipoTrabajo);
 
     return ordenRepository
-        .findByTipo(tipoClase)
+        .findByTipoConRollo(tipoClase)
         .stream()
         .map(this::toDTO)
         .toList();
@@ -84,21 +87,25 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
             .orElse(0) + 1;
     }
 
-    // ── Crear entidad según tipo ──
     private OrdenProduccion crearEntidad(String tipoTrabajo) {
-        return switch (tipoTrabajo.toUpperCase()) {
-            case "DTF"       -> new OrdenDTF();
-            case "DTF_PLUS"  -> new OrdenDTFPlus();
-            case "SUBLIMADO" -> new OrdenSublimado();
-            case "INSIGNIAS_T" -> new OrdenInsigniasTexturizadas();
-            default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
-        };
-    }
+    return switch (tipoTrabajo.toUpperCase()) {
+        case "DTF"        -> new OrdenDTF();
+        case "DTF_PLUS"   -> new OrdenDTFPlus();
+        case "SUBLIMADO"  -> new OrdenSublimado();
+        case "INSIGNIAS_T" -> new OrdenInsigniasTexturizadas();  // ← esto faltaba
+        default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
+    };
+}
 
-    // ── Obtener clase según tipo (REUTILIZA crearEntidad) ──
-    private Class<?> obtenerClase(String tipoTrabajo) {
-        return crearEntidad(tipoTrabajo).getClass();
-    }
+private Class<?> obtenerClase(String tipoTrabajo) {
+    return switch (tipoTrabajo.toUpperCase()) {
+        case "DTF"         -> OrdenDTF.class;
+        case "DTF_PLUS"    -> OrdenDTFPlus.class;
+        case "SUBLIMADO"   -> OrdenSublimado.class;
+        case "INSIGNIAS_T" -> OrdenInsigniasTexturizadas.class;  // ← y esto
+        default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
+    };
+}
 
     // ── Mapear a DTO ──
     private OrdenProduccionDTO toDTO(OrdenProduccion o) {
@@ -129,4 +136,66 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
                 .value())
             .build();
     }
-}
+
+
+    // ── Guardar insignias texturizadas ──  ← AGREGAR DESDE AQUÍ
+    public OrdenInsigniaResponseDTO saveInsignia(OrdenInsigniaRequestDTO dto) {
+        OrdenInsigniasTexturizadas orden = new OrdenInsigniasTexturizadas();
+
+        int anio = LocalDate.now().getYear();
+        orden.setCorrelativo(siguienteCorrelativo(anio, OrdenInsigniasTexturizadas.class));
+        orden.setAnio(anio);
+        orden.setCliente(dto.getCliente());
+        orden.setFecha(dto.getFecha() != null ? dto.getFecha() : LocalDate.now());
+        orden.setFechaEntrega(dto.getFechaEntrega());
+        orden.setObservaciones(dto.getObservaciones());
+        orden.setTipoPago(dto.getTipoPago());
+        orden.setBanco(dto.getBanco());
+        orden.setFechaPago(dto.getFechaPago());
+
+        if (dto.getDetalles() != null) {
+            dto.getDetalles().forEach(d -> {
+                DetalleInsignia detalle = new DetalleInsignia();
+                detalle.setDescripcion(d.getDescripcion());
+                detalle.setCantidad(d.getCantidad());
+                detalle.setTamano(d.getTamano());
+                detalle.setPrecioUnitario(d.getPrecioUnitario());
+                orden.addDetalle(detalle);
+            });
+        }
+
+        return toInsigniaDTO(ordenRepository.save(orden));
+    }
+
+    // ── Mapear insignias a DTO ──
+    private OrdenInsigniaResponseDTO toInsigniaDTO(OrdenInsigniasTexturizadas o) {
+        return OrdenInsigniaResponseDTO.builder()
+            .id(o.getId())
+            .correlativo(o.getCorrelativo())
+            .anio(o.getAnio())
+            .codigoRecibo(o.getCodigoRecibo())
+            .cliente(o.getCliente())
+            .fecha(o.getFecha())
+            .fechaEntrega(o.getFechaEntrega())
+            .observaciones(o.getObservaciones())
+            .total(o.getTotal())
+            .tipoPago(o.getTipoPago())
+            .banco(o.getBanco())
+            .fechaPago(o.getFechaPago())
+            .pagado(o.isPagado())
+            .detalles(o.getDetalles().stream()
+            .map(d -> {
+                DetalleInsigniaDTO dto = new DetalleInsigniaDTO();
+                dto.setId(d.getId());
+                dto.setDescripcion(d.getDescripcion());
+                dto.setTamano(d.getTamano());
+                dto.setCantidad(d.getCantidad());
+                dto.setPrecioUnitario(d.getPrecioUnitario());
+                dto.setSubtotal(d.getSubtotal());
+                return dto;
+            })
+        .toList())
+            .build();
+    }
+
+} // ← cierre de la clase

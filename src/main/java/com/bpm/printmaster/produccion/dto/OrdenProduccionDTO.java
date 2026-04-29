@@ -24,18 +24,16 @@ public class OrdenProduccionDTO {
     @NotNull(message = "Fecha requerida")
     private LocalDate fecha;
 
-    @NotNull(message = "Rollo requerido")
+    
     private Long rolloId;
 
     private String rolloNombre; // solo en respuesta
 
     // ── Impresión ──
-    @NotNull(message = "Metraje requerido")
-    @DecimalMin(value = "0.0", inclusive = false)
+  
     private BigDecimal metraje;
 
-    @NotNull(message = "Costo de impresión requerido")
-    @DecimalMin(value = "0.0", inclusive = false)
+
     private BigDecimal costoImpresion;
     private BigDecimal subtotalImpresion; 
 

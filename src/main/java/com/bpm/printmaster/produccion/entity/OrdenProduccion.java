@@ -31,11 +31,12 @@ public abstract class OrdenProduccion extends Auditable {
     @Column(nullable = false)
     private LocalDate fecha;
 
+    private LocalDate fechaEntrega;          // nuevo, aplica a todos
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rollo_id")
     private Rollo rollo;
 
-    // --- Producción y Subtotales ---
     private BigDecimal metraje;
     private BigDecimal costoImpresion;
     private BigDecimal subtotalImpresion;
@@ -44,37 +45,36 @@ public abstract class OrdenProduccion extends Auditable {
     private BigDecimal costoPlanchado;
     private BigDecimal subtotalPlanchado;
 
-
-
     private BigDecimal costoDiseno;
 
     @Column(nullable = false)
     private BigDecimal total;
 
-    // --- NUEVOS CAMPOS: Información de Pago ---
-    
-    @Column(name = "tipo_pago") // Ejemplo: EFECTIVO, TRANSFERENCIA, QR
+    @Column(name = "tipo_pago")
     private String tipoPago;
 
-    private String banco; // Ejemplo: BCP, BBVA, o null si es efectivo
+    private String banco;
 
     @Column(name = "fecha_pago")
     private LocalDate fechaPago;
 
-    // --- Lógica de Integridad ---
+    // ── Template method ──────────────────────────────────────────
     @PrePersist
     @PreUpdate
-    public void calcularTotales() {
-        this.subtotalImpresion = safeMultiply(metraje, costoImpresion);
-        this.subtotalPlanchado = safeMultiply(cantidadPlanchado, costoPlanchado);
-        
-        BigDecimal diseño = (costoDiseno != null) ? costoDiseno : BigDecimal.ZERO;
-
-        this.total = subtotalImpresion.add(subtotalPlanchado)
-                                      .add(diseño);
+    public final void calcularTotales() {
+        this.total = calcularTotal();
     }
 
-    private BigDecimal safeMultiply(BigDecimal a, BigDecimal b) {
+    // Implementación por defecto para DTF / DTF+ / Sublimado
+    // OrdenInsigniasTexturizadas la sobreescribe
+    protected BigDecimal calcularTotal() {
+        this.subtotalImpresion = safeMultiply(metraje, costoImpresion);
+        this.subtotalPlanchado = safeMultiply(cantidadPlanchado, costoPlanchado);
+        BigDecimal diseno = costoDiseno != null ? costoDiseno : BigDecimal.ZERO;
+        return subtotalImpresion.add(subtotalPlanchado).add(diseno);
+    }
+
+    protected BigDecimal safeMultiply(BigDecimal a, BigDecimal b) {
         return (a != null && b != null) ? a.multiply(b) : BigDecimal.ZERO;
     }
 
@@ -82,7 +82,6 @@ public abstract class OrdenProduccion extends Auditable {
         return correlativo + "/" + (anio % 100);
     }
 
-    // Método extra para tus KPIs: ¿Está pagado?
     public boolean isPagado() {
         return fechaPago != null;
     }
