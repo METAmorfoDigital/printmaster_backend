@@ -31,6 +31,14 @@ public class OrdenProduccionController {
         return ResponseEntity.ok(ordenService.save(dto));
     }
 
+    // PUT /api/ordenes/{id}
+    @PutMapping("/{id}")
+    public ResponseEntity<OrdenProduccionDTO> update(
+            @PathVariable Long id,
+            @RequestBody OrdenProduccionDTO dto) {
+        return ResponseEntity.ok(ordenService.update(id, dto));
+    }
+
     // DELETE /api/ordenes/{id}
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {

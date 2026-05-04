@@ -57,8 +57,9 @@ public class OrdenProduccionDTO {
     private String tipoPago;
     private String banco;
     private LocalDate fechaPago;
-    private boolean pagado;
-
+    private Boolean pagado;
+    
+    
     // ── Tipo de trabajo ──
     @NotBlank(message = "Tipo de trabajo requerido")
     private String tipoTrabajo; // DTF | DTF_PLUS | SUBLIMADO

@@ -75,6 +75,30 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
         return toDTO(ordenRepository.save(orden));
     }
 
+    // ── Actualizar orden DTF/DTF+/Sublimado ──
+    @Transactional
+    public OrdenProduccionDTO update(Long id, OrdenProduccionDTO dto) {
+        OrdenProduccion orden = ordenRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Orden no encontrada"));
+
+        if (dto.getRolloId() != null) {
+            Rollo rollo = rolloRepository.findById(dto.getRolloId())
+                .orElseThrow(() -> new RuntimeException("Rollo no encontrado"));
+            orden.setRollo(rollo);
+        }
+
+        if (dto.getMetraje() != null)           orden.setMetraje(dto.getMetraje());
+        if (dto.getCostoImpresion() != null)    orden.setCostoImpresion(dto.getCostoImpresion());
+        if (dto.getCantidadPlanchado() != null) orden.setCantidadPlanchado(dto.getCantidadPlanchado());
+        if (dto.getCostoPlanchado() != null)    orden.setCostoPlanchado(dto.getCostoPlanchado());
+        if (dto.getCostoDiseno() != null)       orden.setCostoDiseno(dto.getCostoDiseno());
+        if (dto.getTipoPago() != null)          orden.setTipoPago(dto.getTipoPago());
+        if (dto.getBanco() != null)             orden.setBanco(dto.getBanco());
+        if (dto.getFechaPago() != null)         orden.setFechaPago(dto.getFechaPago());
+
+        return toDTO(ordenRepository.save(orden));
+    }
+
     // ── Eliminar ──
     public void delete(Long id) {
         ordenRepository.deleteById(id);
