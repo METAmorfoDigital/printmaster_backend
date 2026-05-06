@@ -7,12 +7,13 @@ import com.bpm.printmaster.produccion.dto.DetalleInsigniaDTO;
 import com.bpm.printmaster.produccion.dto.OrdenInsigniaRequestDTO;
 import com.bpm.printmaster.produccion.dto.OrdenInsigniaResponseDTO;
 import com.bpm.printmaster.produccion.entity.*;
+import com.bpm.printmaster.produccion.repository.CobradorRepository;
 import com.bpm.printmaster.produccion.repository.OrdenProduccionRepository;
+import com.bpm.printmaster.produccion.repository.QrCobradorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.bpm.printmaster.inventory.service.RolloService;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -23,22 +24,26 @@ public class OrdenProduccionService {
     private final OrdenProduccionRepository ordenRepository;
     private final RolloRepository rolloRepository;
     private final RolloService rolloService;
+    private final PagoOrdenService pagoOrdenService;
+    private final CobradorRepository cobradorRepository;       // ← nuevo
+    private final QrCobradorRepository qrCobradorRepository;   // ← nuevo
 
     // ── Listar por tipo ──
-  
-
-@Transactional(readOnly = true)
-public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
-    Class<?> tipoClase = obtenerClase(tipoTrabajo);
-
-    return ordenRepository
-        .findByTipoConRollo(tipoClase)
-        .stream()
-        .map(this::toDTO)
-        .toList();
-}
+    @Transactional(readOnly = true)
+    public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
+        Class<?> tipoClase = obtenerClase(tipoTrabajo);
+        return ordenRepository
+            .findByTipoConRollo(tipoClase)
+            .stream()
+            .map(o -> {
+                pagoOrdenService.enriquecerOrden(o);
+                return toDTO(o);
+            })
+            .toList();
+    }
 
     // ── Guardar ──
+    @Transactional
     public OrdenProduccionDTO save(OrdenProduccionDTO dto) {
         Rollo rollo = rolloRepository.findById(dto.getRolloId())
             .orElseThrow(() -> new RuntimeException("Rollo no encontrado"));
@@ -53,21 +58,22 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
         orden.setCliente(dto.getCliente());
         orden.setFecha(dto.getFecha() != null ? dto.getFecha() : LocalDate.now());
         orden.setRollo(rollo);
-
-        // ── Producción ──
         orden.setMetraje(dto.getMetraje());
         orden.setCostoImpresion(dto.getCostoImpresion());
         orden.setCantidadPlanchado(dto.getCantidadPlanchado());
         orden.setCostoPlanchado(dto.getCostoPlanchado());
-
         orden.setCostoDiseno(dto.getCostoDiseno());
 
-        // ── Pago ──
-        orden.setTipoPago(dto.getTipoPago());
-        orden.setBanco(dto.getBanco());
-        orden.setFechaPago(dto.getFechaPago());
+        // ← cobrador y QR
+        if (dto.getCobradorId() != null) {
+            cobradorRepository.findById(dto.getCobradorId())
+                .ifPresent(orden::setCobrador);
+        }
+        if (dto.getQrId() != null && dto.getQrId() > 0) {
+            qrCobradorRepository.findById(dto.getQrId())
+                .ifPresent(orden::setQr);
+        }
 
-        // ← AGREGAR: descuenta metros del rollo
         if (dto.getMetraje() != null) {
             rolloService.descontarMetros(dto.getRolloId(), dto.getMetraje());
         }
@@ -75,7 +81,7 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
         return toDTO(ordenRepository.save(orden));
     }
 
-    // ── Actualizar orden DTF/DTF+/Sublimado ──
+    // ── Actualizar ──
     @Transactional
     public OrdenProduccionDTO update(Long id, OrdenProduccionDTO dto) {
         OrdenProduccion orden = ordenRepository.findById(id)
@@ -92,10 +98,18 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
         if (dto.getCantidadPlanchado() != null) orden.setCantidadPlanchado(dto.getCantidadPlanchado());
         if (dto.getCostoPlanchado() != null)    orden.setCostoPlanchado(dto.getCostoPlanchado());
         if (dto.getCostoDiseno() != null)       orden.setCostoDiseno(dto.getCostoDiseno());
-        if (dto.getTipoPago() != null)          orden.setTipoPago(dto.getTipoPago());
-        if (dto.getBanco() != null)             orden.setBanco(dto.getBanco());
-        if (dto.getFechaPago() != null)         orden.setFechaPago(dto.getFechaPago());
 
+        // ← cobrador y QR en edición
+        if (dto.getCobradorId() != null) {
+            cobradorRepository.findById(dto.getCobradorId())
+                .ifPresent(orden::setCobrador);
+        }
+        if (dto.getQrId() != null && dto.getQrId() > 0) {
+            qrCobradorRepository.findById(dto.getQrId())
+                .ifPresent(orden::setQr);
+        }
+
+        pagoOrdenService.enriquecerOrden(orden);
         return toDTO(ordenRepository.save(orden));
     }
 
@@ -104,7 +118,7 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
         ordenRepository.deleteById(id);
     }
 
-    // ── Siguiente correlativo por año y tipo ──
+    // ── Helpers ──
     private int siguienteCorrelativo(int anio, Class<?> tipo) {
         return ordenRepository
             .findMaxCorrelativoByAnioAndTipo(anio, tipo)
@@ -112,24 +126,24 @@ public List<OrdenProduccionDTO> getByTipo(String tipoTrabajo) {
     }
 
     private OrdenProduccion crearEntidad(String tipoTrabajo) {
-    return switch (tipoTrabajo.toUpperCase()) {
-        case "DTF"        -> new OrdenDTF();
-        case "DTF_PLUS"   -> new OrdenDTFPlus();
-        case "SUBLIMADO"  -> new OrdenSublimado();
-        case "INSIGNIAS_T" -> new OrdenInsigniasTexturizadas();  // ← esto faltaba
-        default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
-    };
-}
+        return switch (tipoTrabajo.toUpperCase()) {
+            case "DTF"         -> new OrdenDTF();
+            case "DTF_PLUS"    -> new OrdenDTFPlus();
+            case "SUBLIMADO"   -> new OrdenSublimado();
+            case "INSIGNIAS_T" -> new OrdenInsigniasTexturizadas();
+            default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
+        };
+    }
 
-private Class<?> obtenerClase(String tipoTrabajo) {
-    return switch (tipoTrabajo.toUpperCase()) {
-        case "DTF"         -> OrdenDTF.class;
-        case "DTF_PLUS"    -> OrdenDTFPlus.class;
-        case "SUBLIMADO"   -> OrdenSublimado.class;
-        case "INSIGNIAS_T" -> OrdenInsigniasTexturizadas.class;  // ← y esto
-        default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
-    };
-}
+    private Class<?> obtenerClase(String tipoTrabajo) {
+        return switch (tipoTrabajo.toUpperCase()) {
+            case "DTF"         -> OrdenDTF.class;
+            case "DTF_PLUS"    -> OrdenDTFPlus.class;
+            case "SUBLIMADO"   -> OrdenSublimado.class;
+            case "INSIGNIAS_T" -> OrdenInsigniasTexturizadas.class;
+            default -> throw new RuntimeException("Tipo de trabajo inválido: " + tipoTrabajo);
+        };
+    }
 
     // ── Mapear a DTO ──
     private OrdenProduccionDTO toDTO(OrdenProduccion o) {
@@ -148,21 +162,24 @@ private Class<?> obtenerClase(String tipoTrabajo) {
             .cantidadPlanchado(o.getCantidadPlanchado())
             .costoPlanchado(o.getCostoPlanchado())
             .subtotalPlanchado(o.getSubtotalPlanchado())
-
             .costoDiseno(o.getCostoDiseno())
             .total(o.getTotal())
-            .tipoPago(o.getTipoPago())
-            .banco(o.getBanco())
-            .fechaPago(o.getFechaPago())
             .pagado(o.isPagado())
+            .estadoPago(o.getEstadoPago())
+            // ← cobrador y QR
+            .cobradorId(o.getCobrador() != null ? o.getCobrador().getId() : null)
+            .cobradorNombre(o.getCobrador() != null ? o.getCobrador().getNombre() : null)
+            .qrId(o.getQr() != null ? o.getQr().getId() : null)
+            .qrBanco(o.getQr() != null ? o.getQr().getBanco() : null)
+            .qrImagenBase64(o.getQr() != null ? o.getQr().getImagenBase64() : null)
             .tipoTrabajo(o.getClass()
                 .getAnnotation(jakarta.persistence.DiscriminatorValue.class)
                 .value())
             .build();
     }
 
-
-    // ── Guardar insignias texturizadas ──  ← AGREGAR DESDE AQUÍ
+    // ── Guardar insignias ──
+    @Transactional
     public OrdenInsigniaResponseDTO saveInsignia(OrdenInsigniaRequestDTO dto) {
         OrdenInsigniasTexturizadas orden = new OrdenInsigniasTexturizadas();
 
@@ -173,9 +190,16 @@ private Class<?> obtenerClase(String tipoTrabajo) {
         orden.setFecha(dto.getFecha() != null ? dto.getFecha() : LocalDate.now());
         orden.setFechaEntrega(dto.getFechaEntrega());
         orden.setObservaciones(dto.getObservaciones());
-        orden.setTipoPago(dto.getTipoPago());
-        orden.setBanco(dto.getBanco());
-        orden.setFechaPago(dto.getFechaPago());
+
+        // ← cobrador y QR en insignias
+        if (dto.getCobradorId() != null) {
+            cobradorRepository.findById(dto.getCobradorId())
+                .ifPresent(orden::setCobrador);
+        }
+        if (dto.getQrId() != null && dto.getQrId() > 0) {
+            qrCobradorRepository.findById(dto.getQrId())
+                .ifPresent(orden::setQr);
+        }
 
         if (dto.getDetalles() != null) {
             dto.getDetalles().forEach(d -> {
@@ -203,22 +227,26 @@ private Class<?> obtenerClase(String tipoTrabajo) {
             .fechaEntrega(o.getFechaEntrega())
             .observaciones(o.getObservaciones())
             .total(o.getTotal())
-            .tipoPago(o.getTipoPago())
-            .banco(o.getBanco())
-            .fechaPago(o.getFechaPago())
             .pagado(o.isPagado())
+            .estadoPago(o.getEstadoPago())
+            // ← cobrador y QR en insignias
+            .cobradorId(o.getCobrador() != null ? o.getCobrador().getId() : null)
+            .cobradorNombre(o.getCobrador() != null ? o.getCobrador().getNombre() : null)
+            .qrId(o.getQr() != null ? o.getQr().getId() : null)
+            .qrBanco(o.getQr() != null ? o.getQr().getBanco() : null)
+            .qrImagenBase64(o.getQr() != null ? o.getQr().getImagenBase64() : null)
             .detalles(o.getDetalles().stream()
-            .map(d -> {
-                DetalleInsigniaDTO dto = new DetalleInsigniaDTO();
-                dto.setId(d.getId());
-                dto.setDescripcion(d.getDescripcion());
-                dto.setTamano(d.getTamano());
-                dto.setCantidad(d.getCantidad());
-                dto.setPrecioUnitario(d.getPrecioUnitario());
-                dto.setSubtotal(d.getSubtotal());
-                return dto;
-            })
-        .toList())
+                .map(d -> {
+                    DetalleInsigniaDTO det = new DetalleInsigniaDTO();
+                    det.setId(d.getId());
+                    det.setDescripcion(d.getDescripcion());
+                    det.setTamano(d.getTamano());
+                    det.setCantidad(d.getCantidad());
+                    det.setPrecioUnitario(d.getPrecioUnitario());
+                    det.setSubtotal(d.getSubtotal());
+                    return det;
+                })
+                .toList())
             .build();
     }
 

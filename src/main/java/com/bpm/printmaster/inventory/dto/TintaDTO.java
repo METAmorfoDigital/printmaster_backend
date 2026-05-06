@@ -23,6 +23,10 @@ public class TintaDTO {
     @Min(value = 0)
     private Integer cantidad;
 
+    private String tipoTrabajo;  // DTF | DTF_PLUS | SUBLIMADO | INSIGNIAS_T
+
+
+
     @NotBlank(message = "Color requerido")
     private String color;
 

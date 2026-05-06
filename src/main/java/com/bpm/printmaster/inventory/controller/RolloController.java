@@ -47,4 +47,9 @@ public ResponseEntity<RolloDTO> agregarStock(
 
     return ResponseEntity.ok(rolloService.agregarStock(id, cantidad));
 }
+
+@PostMapping("/lote")
+public ResponseEntity<List<RolloDTO>> saveLote(@RequestBody RolloDTO dto) {
+    return ResponseEntity.ok(rolloService.saveLote(dto));
+}
 }

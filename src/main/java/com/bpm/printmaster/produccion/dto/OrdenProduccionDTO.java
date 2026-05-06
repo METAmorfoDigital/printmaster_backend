@@ -24,6 +24,7 @@ public class OrdenProduccionDTO {
     @NotNull(message = "Fecha requerida")
     private LocalDate fecha;
 
+    private LocalDate fechaEntrega;
     
     private Long rolloId;
 
@@ -56,9 +57,21 @@ public class OrdenProduccionDTO {
     // ── Pago ──
     private String tipoPago;
     private String banco;
+
+    private String estadoPago; // "PENDIENTE", "PARCIAL", "PAGADO"
+
     private LocalDate fechaPago;
     private Boolean pagado;
     
+    
+    //para pagos
+    private Long       cobradorId;      // para recibir desde el frontend al guardar
+    private Long       qrId;            // para recibir desde el frontend al guardar
+ 
+    private String     cobradorNombre;  // para mostrar en planilla
+    private String     qrBanco;         // para mostrar en planilla
+    private String     qrImagenBase64;  // para descargar QR desde planilla
+
     
     // ── Tipo de trabajo ──
     @NotBlank(message = "Tipo de trabajo requerido")

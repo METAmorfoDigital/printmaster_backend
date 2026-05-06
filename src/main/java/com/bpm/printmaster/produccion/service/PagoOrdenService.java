@@ -74,4 +74,17 @@ public class PagoOrdenService {
             .nota(p.getNota())
             .build();
     }
+
+    
+    public void enriquecerOrden(OrdenProduccion orden) {
+    BigDecimal suma = pagoRepository.sumMontoByOrdenId(orden.getId());
+    orden.setSumaPagos(suma);
+    if (suma.compareTo(BigDecimal.ZERO) == 0) {
+        orden.setEstadoPago("PENDIENTE");
+    } else if (orden.getTotal() != null && suma.compareTo(orden.getTotal()) >= 0) {
+        orden.setEstadoPago("PAGADO");
+    } else {
+        orden.setEstadoPago("PARCIAL");
+    }
+}
 }

@@ -10,25 +10,28 @@ import java.util.Optional;
 
 public interface OrdenProduccionRepository extends JpaRepository<OrdenProduccion, Long> {
 
-    // ── Para DTF / DTF+ / Sublimado — trae el rollo en el mismo query ──
+    // ── DTF / DTF+ / Sublimado — rollo + cobrador + qr ──────────
     @Query("""
         SELECT o FROM OrdenProduccion o
         LEFT JOIN FETCH o.rollo
+        LEFT JOIN FETCH o.cobrador
+        LEFT JOIN FETCH o.qr
         WHERE TYPE(o) = :tipo
         ORDER BY o.correlativo DESC
     """)
     List<OrdenProduccion> findByTipoConRollo(@Param("tipo") Class<?> tipo);
 
-    // ── Para Insignias — trae los detalles en el mismo query ──
-    // Sin LEFT JOIN FETCH o.rollo porque insignias no tiene rollo
-@Query("""
-    SELECT DISTINCT o FROM OrdenProduccion o
-    LEFT JOIN FETCH o.detalles d
-    WHERE TYPE(o) = :tipo
-""")
-List<OrdenProduccion> findByTipoConDetalles(@Param("tipo") Class<?> tipo);
+    // ── Insignias — detalles + cobrador + qr ────────────────────
+    @Query("""
+        SELECT DISTINCT o FROM OrdenProduccion o
+        LEFT JOIN FETCH o.detalles d
+        LEFT JOIN FETCH o.cobrador
+        LEFT JOIN FETCH o.qr
+        WHERE TYPE(o) = :tipo
+    """)
+    List<OrdenProduccion> findByTipoConDetalles(@Param("tipo") Class<?> tipo);
 
-    // ── Correlativo máximo por año y tipo ──
+    // ── Correlativo máximo por año y tipo ───────────────────────
     @Query("""
         SELECT MAX(o.correlativo)
         FROM OrdenProduccion o
@@ -39,7 +42,7 @@ List<OrdenProduccion> findByTipoConDetalles(@Param("tipo") Class<?> tipo);
         @Param("tipo") Class<?> tipo
     );
 
-    // ── Órdenes por rollo — solo aplica a tipos con metraje ──
+    // ── Órdenes por rollo ────────────────────────────────────────
     @Query("""
         SELECT o FROM OrdenProduccion o
         LEFT JOIN FETCH o.rollo

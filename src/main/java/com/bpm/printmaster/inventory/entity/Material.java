@@ -26,6 +26,9 @@ public abstract class Material extends Auditable {
     
     private Integer cantidad;
 
+    @Column(name = "tipo_trabajo", length = 20)
+    private String tipoTrabajo;
+
     // ✅ Relación con Proveedor
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "proveedor_id")

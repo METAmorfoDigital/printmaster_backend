@@ -31,11 +31,21 @@ public abstract class OrdenProduccion extends Auditable {
     @Column(nullable = false)
     private LocalDate fecha;
 
-    private LocalDate fechaEntrega;          // nuevo, aplica a todos
+    private LocalDate fechaEntrega;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rollo_id")
     private Rollo rollo;
+
+    // ── Cobrador y QR ────────────────────────────────────────────
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cobrador_id")
+    private Cobrador cobrador;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "qr_id")
+    private QrCobrador qr;
+    // ─────────────────────────────────────────────────────────────
 
     private BigDecimal metraje;
     private BigDecimal costoImpresion;
@@ -58,15 +68,12 @@ public abstract class OrdenProduccion extends Auditable {
     @Column(name = "fecha_pago")
     private LocalDate fechaPago;
 
-    // ── Template method ──────────────────────────────────────────
     @PrePersist
     @PreUpdate
     public final void calcularTotales() {
         this.total = calcularTotal();
     }
 
-    // Implementación por defecto para DTF / DTF+ / Sublimado
-    // OrdenInsigniasTexturizadas la sobreescribe
     protected BigDecimal calcularTotal() {
         this.subtotalImpresion = safeMultiply(metraje, costoImpresion);
         this.subtotalPlanchado = safeMultiply(cantidadPlanchado, costoPlanchado);
@@ -82,7 +89,13 @@ public abstract class OrdenProduccion extends Auditable {
         return correlativo + "/" + (anio % 100);
     }
 
+    @Transient
+    private String estadoPago = "PENDIENTE";
+
+    @Transient
+    private java.math.BigDecimal sumaPagos = java.math.BigDecimal.ZERO;
+
     public boolean isPagado() {
-        return fechaPago != null;
+        return "PAGADO".equals(estadoPago);
     }
 }

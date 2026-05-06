@@ -14,5 +14,9 @@ public class OrdenInsigniaRequestDTO {
     private String tipoPago;
     private String banco;
     private LocalDate fechaPago;
+    private String estadoPago; // ← agregar
     private List<DetalleInsigniaDTO> detalles;
+        // ── Cobrador y QR ─────────────────────────────────────────────
+    private Long cobradorId;
+    private Long qrId;
 }

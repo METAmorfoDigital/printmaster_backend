@@ -22,6 +22,14 @@ public class OrdenInsigniaResponseDTO {
     private String tipoPago;
     private String banco;
     private LocalDate fechaPago;
+    private String estadoPago; // ← agregar
     private boolean pagado;
     private List<DetalleInsigniaDTO> detalles;
+
+    //para pagos
+   private Long cobradorId;
+    private String cobradorNombre;
+    private Long qrId;
+    private String qrBanco;
+    private String qrImagenBase64;
 }

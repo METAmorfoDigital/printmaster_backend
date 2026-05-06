@@ -20,6 +20,10 @@ public class RolloDTO {
     @NotBlank(message = "Marca requerida")
     private String marca;
 
+    private String tipoTrabajo;  // DTF | DTF_PLUS | SUBLIMADO | INSIGNIAS_T
+
+    private Integer cantidadLote; // cuántos rollos crear en lote
+    
     private String codigo;
     private BigDecimal metrosDisponibles;
 
