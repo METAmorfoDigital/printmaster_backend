@@ -29,6 +29,28 @@ public class RolloService {
     private final TablaMaestraRepository tablaMaestraRepository;
     private final OrdenProduccionRepository ordenRepository;
 
+    private String buildPrefijo(int anio, String tipoTrabajo) {
+    String tipo = switch (tipoTrabajo.toUpperCase()) {
+        case "DTF"         -> "DTF";
+        case "DTF_PLUS"    -> "DTFP";
+        case "SUBLIMADO"   -> "SUB";
+        case "INSIGNIAS_T" -> "INS";
+        default            -> "ROLL";
+    };
+    return String.format("%s-%02d", tipo, anio);
+}
+
+    // ← agregar este método privado
+    private int siguienteNumero(int anio, String tipoTrabajo) {
+        String prefijo = buildPrefijo(anio, tipoTrabajo);
+        return rolloRepository.findMaxCodigoByPrefijo(prefijo)
+            .map(codigo -> {
+                String[] partes = codigo.split("-");
+                return Integer.parseInt(partes[partes.length - 1]) + 1;
+            })
+            .orElse(1);
+    }
+
     public List<RolloDTO> getAll() {
         return rolloRepository.findAll()
                 .stream().map(this::toDTO).toList();
@@ -54,8 +76,9 @@ public class RolloService {
         rollo.setProveedor(proveedor);
 
         int anio = LocalDate.now().getYear() % 100;
-        int siguiente = rolloRepository.findMaxId().orElse(0L).intValue() + 1;
-        rollo.setCodigo(String.format("ROLL-%02d-%03d", anio, siguiente));
+        String prefijo = buildPrefijo(anio, dto.getTipoTrabajo());
+        int siguiente = siguienteNumero(anio, dto.getTipoTrabajo());
+        rollo.setCodigo(String.format("%s-%03d", prefijo, siguiente));
 
         return toDTO(rolloRepository.save(rollo));
     }
@@ -73,12 +96,12 @@ public class RolloService {
             ? dto.getCantidadLote() : 1;
 
         int anio = LocalDate.now().getYear() % 100;
-        long siguiente = rolloRepository.findMaxId().orElse(0L);
+        String prefijo = buildPrefijo(anio, dto.getTipoTrabajo());
+        int siguiente = siguienteNumero(anio, dto.getTipoTrabajo());
 
         List<Rollo> rollos = new ArrayList<>();
 
         for (int i = 0; i < cantidad; i++) {
-            siguiente++;
             Rollo rollo = new Rollo();
             rollo.setNombre(dto.getNombre());
             rollo.setPrecio(dto.getPrecio());
@@ -89,7 +112,8 @@ public class RolloService {
             rollo.setTipoTrabajo(dto.getTipoTrabajo());
             rollo.setTipoRollo(tipoRollo);
             rollo.setProveedor(proveedor);
-            rollo.setCodigo(String.format("ROLL-%02d-%03d", anio, siguiente));
+            rollo.setCodigo(String.format("%s-%03d", prefijo, siguiente));
+            siguiente++; // ← incrementar después de asignar
             rollos.add(rollo);
         }
 
@@ -131,10 +155,18 @@ public class RolloService {
         return toDTO(rolloRepository.save(rollo));
     }
 
+    public List<RolloDTO> getByTipo(String tipoTrabajo) {
+    return rolloRepository
+        .findByTipoTrabajoAndMetrosDisponiblesGreaterThan(
+            tipoTrabajo, BigDecimal.ZERO)
+        .stream().map(this::toDTO).toList();
+}
+
     // ── Eliminar ──
     public void delete(Long id) {
         rolloRepository.deleteById(id);
     }
+
 
     // ── Reporte ──
     public RolloReporteDTO getReporte(Long rolloId) {
@@ -193,4 +225,6 @@ public class RolloService {
             .proveedorId(r.getProveedor() != null ? r.getProveedor().getId() : null)
             .build();
     }
+
+    
 }

@@ -1,5 +1,6 @@
 package com.bpm.printmaster.produccion.service;
 
+import com.bpm.printmaster.common.Auditoria.AuditLogService;
 import com.bpm.printmaster.inventory.entity.Rollo;
 import com.bpm.printmaster.inventory.repository.RolloRepository;
 import com.bpm.printmaster.produccion.dto.OrdenProduccionDTO;
@@ -27,6 +28,7 @@ public class OrdenProduccionService {
     private final PagoOrdenService pagoOrdenService;
     private final CobradorRepository cobradorRepository;       // ← nuevo
     private final QrCobradorRepository qrCobradorRepository;   // ← nuevo
+    private final AuditLogService auditLogService; //para auditoría
 
     // ── Listar por tipo ──
     @Transactional(readOnly = true)
@@ -78,7 +80,13 @@ public class OrdenProduccionService {
             rolloService.descontarMetros(dto.getRolloId(), dto.getMetraje());
         }
 
-        return toDTO(ordenRepository.save(orden));
+        OrdenProduccionDTO result = toDTO(ordenRepository.save(orden));
+        auditLogService.log("CREATE", dto.getTipoTrabajo(), result.getId().toString(),
+            "Nueva orden — Recibo: " + result.getCodigoRecibo() +
+            " | Cliente: " + result.getCliente() +
+            " | Rollo: " + rollo.getNombre() +
+            " | Total: Bs. " + result.getTotal());
+        return result;
     }
 
     // ── Actualizar ──
@@ -110,11 +118,24 @@ public class OrdenProduccionService {
         }
 
         pagoOrdenService.enriquecerOrden(orden);
-        return toDTO(ordenRepository.save(orden));
+        OrdenProduccionDTO result = toDTO(ordenRepository.save(orden));
+        auditLogService.log("UPDATE", dto.getTipoTrabajo(), result.getId().toString(),
+            "Orden actualizada — Recibo: " + result.getCodigoRecibo() +
+            " | Cliente: " + result.getCliente() +
+            " | Rollo: " + result.getRolloNombre() +
+            " | Total: Bs. " + result.getTotal());
+        return result;
     }
 
     // ── Eliminar ──
+    @Transactional
     public void delete(Long id) {
+        OrdenProduccion orden = ordenRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Orden no encontrada"));
+        auditLogService.log("DELETE", "Orden", id.toString(),
+            "Orden eliminada — Recibo: " + orden.getCodigoRecibo() +
+            " | Cliente: " + orden.getCliente() +
+            " | Total: Bs. " + orden.getTotal());
         ordenRepository.deleteById(id);
     }
 
@@ -166,6 +187,7 @@ public class OrdenProduccionService {
             .total(o.getTotal())
             .pagado(o.isPagado())
             .estadoPago(o.getEstadoPago())
+            .creadoPor(o.getCreatedBy())
             // ← cobrador y QR
             .cobradorId(o.getCobrador() != null ? o.getCobrador().getId() : null)
             .cobradorNombre(o.getCobrador() != null ? o.getCobrador().getNombre() : null)
@@ -212,7 +234,12 @@ public class OrdenProduccionService {
             });
         }
 
-        return toInsigniaDTO(ordenRepository.save(orden));
+        OrdenInsigniaResponseDTO result = toInsigniaDTO(ordenRepository.save(orden));
+        auditLogService.log("CREATE", "INSIGNIAS_T", result.getId().toString(),
+            "Nueva orden insignias — Recibo: " + result.getCodigoRecibo() +
+            " | Cliente: " + result.getCliente() +
+            " | Total: Bs. " + result.getTotal());
+        return result;
     }
 
     // ── Mapear insignias a DTO ──
@@ -235,6 +262,7 @@ public class OrdenProduccionService {
             .qrId(o.getQr() != null ? o.getQr().getId() : null)
             .qrBanco(o.getQr() != null ? o.getQr().getBanco() : null)
             .qrImagenBase64(o.getQr() != null ? o.getQr().getImagenBase64() : null)
+            .creadoPor(o.getCreatedBy())
             .detalles(o.getDetalles().stream()
                 .map(d -> {
                     DetalleInsigniaDTO det = new DetalleInsigniaDTO();

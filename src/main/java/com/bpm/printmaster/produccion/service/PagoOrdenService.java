@@ -1,5 +1,6 @@
 package com.bpm.printmaster.produccion.service;
 
+import com.bpm.printmaster.common.Auditoria.AuditLogService;
 import com.bpm.printmaster.produccion.dto.PagoOrdenDTO;
 import com.bpm.printmaster.produccion.entity.OrdenProduccion;
 import com.bpm.printmaster.produccion.entity.PagoOrden;
@@ -8,6 +9,7 @@ import com.bpm.printmaster.produccion.repository.PagoOrdenRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -18,6 +20,8 @@ public class PagoOrdenService {
 
     private final PagoOrdenRepository pagoRepository;
     private final OrdenProduccionRepository ordenRepository;
+    private final AuditLogService auditLogService;
+
 
     @Transactional(readOnly = true)
     public List<PagoOrdenDTO> listarPagos(Long ordenId) {
@@ -32,7 +36,6 @@ public class PagoOrdenService {
         OrdenProduccion orden = ordenRepository.findById(ordenId)
             .orElseThrow(() -> new RuntimeException("Orden no encontrada: " + ordenId));
 
-        // Validar que no se pague de más
         BigDecimal sumaPagada = pagoRepository.sumMontoByOrdenId(ordenId);
         BigDecimal saldoPendiente = orden.getTotal().subtract(sumaPagada);
 
@@ -48,11 +51,25 @@ public class PagoOrdenService {
         pago.setFechaPago(dto.getFechaPago());
         pago.setNota(dto.getNota());
 
-        return toDTO(pagoRepository.save(pago));
+        PagoOrdenDTO result = toDTO(pagoRepository.save(pago));
+        auditLogService.log("CREATE", "Pago", result.getId().toString(),
+            "Pago registrado — Orden: " + orden.getCodigoRecibo() +
+            " | Cliente: " + orden.getCliente() +
+            " | Monto: Bs. " + result.getMonto() +
+            " | Tipo: " + result.getTipoPago() +
+            (result.getBanco() != null ? " | Banco: " + result.getBanco() : ""));
+        return result;
     }
 
     @Transactional
     public void eliminarPago(Long pagoId) {
+        PagoOrden pago = pagoRepository.findById(pagoId)
+            .orElseThrow(() -> new RuntimeException("Pago no encontrado: " + pagoId));
+        auditLogService.log("DELETE", "Pago", pagoId.toString(),
+            "Pago eliminado — Orden: " + pago.getOrden().getCodigoRecibo() +
+            " | Cliente: " + pago.getOrden().getCliente() +
+            " | Monto: Bs. " + pago.getMonto() +
+            " | Tipo: " + pago.getTipoPago());
         pagoRepository.deleteById(pagoId);
     }
 

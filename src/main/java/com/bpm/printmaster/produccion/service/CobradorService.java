@@ -1,5 +1,6 @@
 package com.bpm.printmaster.produccion.service;
 
+import com.bpm.printmaster.common.Auditoria.AuditLogService;
 import com.bpm.printmaster.produccion.dto.CobradorDTO;
 import com.bpm.printmaster.produccion.dto.QrCobradorDTO;
 import com.bpm.printmaster.produccion.entity.Cobrador;
@@ -20,6 +21,7 @@ public class CobradorService {
     private final CobradorRepository cobradorRepository;
     private final QrCobradorRepository qrRepository;
 
+    private final AuditLogService auditLogService;
     private static final int DIAS_ALERTA = 7;
 
     // ── Cobradores ──
@@ -41,7 +43,10 @@ public class CobradorService {
         Cobrador cobrador = new Cobrador();
         cobrador.setNombre(dto.getNombre());
         cobrador.setActivo(true);
-        return toDTO(cobradorRepository.save(cobrador));
+        CobradorDTO result = toDTO(cobradorRepository.save(cobrador));
+        auditLogService.log("CREATE", "Cobrador", result.getId().toString(),
+            "Nuevo cobrador: " + result.getNombre());
+        return result;
     }
 
     @Transactional
@@ -50,11 +55,19 @@ public class CobradorService {
             .orElseThrow(() -> new RuntimeException("Cobrador no encontrado"));
         cobrador.setNombre(dto.getNombre());
         cobrador.setActivo(dto.isActivo());
-        return toDTO(cobradorRepository.save(cobrador));
+        CobradorDTO result = toDTO(cobradorRepository.save(cobrador));
+        auditLogService.log("UPDATE", "Cobrador", id.toString(),
+            "Cobrador actualizado — Nombre: " + result.getNombre() +
+            " | Activo: " + result.isActivo());
+        return result;
     }
 
     @Transactional
     public void eliminar(Long id) {
+        Cobrador cobrador = cobradorRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cobrador no encontrado"));
+        auditLogService.log("DELETE", "Cobrador", id.toString(),
+            "Cobrador eliminado — Nombre: " + cobrador.getNombre());
         cobradorRepository.deleteById(id);
     }
 
@@ -71,11 +84,21 @@ public class CobradorService {
         qr.setImagenBase64(dto.getImagenBase64());
         qr.setFechaExpiracion(dto.getFechaExpiracion());
 
-        return toQrDTO(qrRepository.save(qr));
+        QrCobradorDTO result = toQrDTO(qrRepository.save(qr));
+        auditLogService.log("CREATE", "QR-Cobrador", result.getId().toString(),
+            "QR agregado — Cobrador: " + cobrador.getNombre() +
+            " | Banco: " + result.getBanco() +
+            " | Vence: " + (result.getFechaExpiracion() != null ? result.getFechaExpiracion() : "Sin fecha"));
+        return result;
     }
 
     @Transactional
     public void eliminarQr(Long qrId) {
+        QrCobrador qr = qrRepository.findById(qrId)
+            .orElseThrow(() -> new RuntimeException("QR no encontrado"));
+        auditLogService.log("DELETE", "QR-Cobrador", qrId.toString(),
+            "QR eliminado — Cobrador: " + qr.getCobrador().getNombre() +
+            " | Banco: " + qr.getBanco());
         qrRepository.deleteById(qrId);
     }
 

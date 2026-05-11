@@ -72,6 +72,7 @@ public class OrdenProduccionDTO {
     private String     qrBanco;         // para mostrar en planilla
     private String     qrImagenBase64;  // para descargar QR desde planilla
 
+    private String creadoPor;
     
     // ── Tipo de trabajo ──
     @NotBlank(message = "Tipo de trabajo requerido")

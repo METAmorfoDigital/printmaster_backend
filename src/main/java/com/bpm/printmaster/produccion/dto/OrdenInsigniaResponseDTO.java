@@ -26,6 +26,8 @@ public class OrdenInsigniaResponseDTO {
     private boolean pagado;
     private List<DetalleInsigniaDTO> detalles;
 
+    private String creadoPor;
+    
     //para pagos
    private Long cobradorId;
     private String cobradorNombre;

@@ -21,6 +21,7 @@ public class RolloController {
         return ResponseEntity.ok(rolloService.getAll());
     }
 
+
     @PostMapping
     public ResponseEntity<RolloDTO> save(@Valid @RequestBody RolloDTO dto) {
         return ResponseEntity.ok(rolloService.save(dto));
@@ -52,4 +53,11 @@ public ResponseEntity<RolloDTO> agregarStock(
 public ResponseEntity<List<RolloDTO>> saveLote(@RequestBody RolloDTO dto) {
     return ResponseEntity.ok(rolloService.saveLote(dto));
 }
+
+
+@GetMapping("/por-tipo")
+public ResponseEntity<List<RolloDTO>> getByTipo(@RequestParam String tipoTrabajo) {
+    return ResponseEntity.ok(rolloService.getByTipo(tipoTrabajo));
+}
+
 }
