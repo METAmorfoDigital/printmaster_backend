@@ -3,9 +3,9 @@ spring:
     name: printmaster-erp
 
   datasource:
-    url: jdbc:mysql://localhost:3306/printmaster_erp?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/La_Paz
-    username: ${DB_USERNAME:root}
-    password: ${DB_PASSWORD:root}
+    url: ${DATABASE_URL:jdbc:mysql://localhost:3306/printmaster_erp?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/La_Paz}
+    username: ${DATABASE_USER:root}
+    password: ${DATABASE_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     hikari:
@@ -29,13 +29,13 @@ spring:
     time-zone: America/La_Paz
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
-# ✅ JWT config
+# JWT config
 jwt:
   secret: ${JWT_SECRET:PrintMasterSecretKeyMuySeguraYLarga2024!}
-  expiration: ${JWT_EXPIRATION:86400000} 
+  expiration: ${JWT_EXPIRATION:86400000}
 
-  logging:
+logging:
   level:
     org.hibernate.orm.jdbc.bind: TRACE
