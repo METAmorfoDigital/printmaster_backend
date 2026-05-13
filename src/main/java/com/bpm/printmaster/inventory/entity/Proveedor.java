@@ -23,7 +23,7 @@ public class Proveedor extends Auditable {
 
     private String telefono;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = true)
     private String email;
 
     private String direccion;

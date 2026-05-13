@@ -23,7 +23,6 @@ public class ProveedorService {
     }
 
     public ProveedorDTO save(ProveedorDTO dto) {
-        // ✅ Verificar duplicado por nombre
         boolean existe = proveedorRepository.findByActivoTrue()
                 .stream()
                 .anyMatch(p -> p.getNombre().equalsIgnoreCase(dto.getNombre()));
@@ -33,12 +32,17 @@ public class ProveedorService {
                     + dto.getNombre());
         }
 
+        // ✅ Convierte email vacío a null para evitar conflicto unique
+        String email = (dto.getEmail() != null && dto.getEmail().isBlank()) 
+            ? null 
+            : dto.getEmail();
+
         Proveedor proveedor = Proveedor.builder()
                 .nombre(dto.getNombre())
                 .telefono(dto.getTelefono())
-                .email(dto.getEmail())
+                .email(email) // ← usa email limpio
                 .direccion(dto.getDireccion())
-                .activo(true) // ✅ siempre true al crear
+                .activo(true)
                 .build();
 
         Proveedor saved = proveedorRepository.save(proveedor);
