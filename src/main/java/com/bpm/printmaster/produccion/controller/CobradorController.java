@@ -24,20 +24,20 @@ public class CobradorController {
     }
 
     @GetMapping("/todos")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<List<CobradorDTO>> listarTodos() {
         return ResponseEntity.ok(cobradorService.listarTodos());
     }
 
     // ── Solo ADMIN puede modificar ──
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<CobradorDTO> crear(@RequestBody CobradorDTO dto) {
         return ResponseEntity.ok(cobradorService.crear(dto));
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<CobradorDTO> actualizar(
             @PathVariable Long id,
             @RequestBody CobradorDTO dto) {
@@ -45,7 +45,7 @@ public class CobradorController {
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         cobradorService.eliminar(id);
         return ResponseEntity.noContent().build();
@@ -53,7 +53,7 @@ public class CobradorController {
 
     // ── QR ──
     @PostMapping("/{cobradorId}/qr")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<QrCobradorDTO> agregarQr(
             @PathVariable Long cobradorId,
             @RequestBody QrCobradorDTO dto) {
@@ -61,7 +61,7 @@ public class CobradorController {
     }
 
     @DeleteMapping("/qr/{qrId}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<Void> eliminarQr(@PathVariable Long qrId) {
         cobradorService.eliminarQr(qrId);
         return ResponseEntity.noContent().build();
