@@ -4,11 +4,14 @@ import lombok.Getter;
 
 @Getter
 public enum Role {
+
+    SUPER_ADMIN("Modo dios"),
     ADMIN("Administrador"),
     OPERADOR("Operador"),
     USER("Usuario"),
     COBRADOR("Cobrador"),
-    DISENADOR("Diseñador");
+    DISENADOR("Diseñador"),
+    CONTADOR("Contador");
 
 
 
