@@ -10,8 +10,7 @@ public enum Role {
     OPERADOR("Operador"),
     USER("Usuario"),
     COBRADOR("Cobrador"),
-    DISENADOR("Diseñador"),
-    CONTADOR("Contador");
+    DISENADOR("Diseñador");
 
 
 
