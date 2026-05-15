@@ -16,7 +16,7 @@ public class AuditLogController {
     private final AuditLogService auditLogService;
 
     @GetMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<Page<AuditLogDTO>> listar(
             @RequestParam(defaultValue = "0")  int page,
             @RequestParam(defaultValue = "50") int size,

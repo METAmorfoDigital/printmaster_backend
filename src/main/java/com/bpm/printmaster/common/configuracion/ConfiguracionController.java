@@ -23,7 +23,7 @@ public class ConfiguracionController {
     }
 
     @PutMapping("/tipo-cambio")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPER_ADMIN')")
     public ResponseEntity<Void> setTipoCambio(@RequestBody Map<String, String> body) {
         configuracionService.setTipoCambio(new BigDecimal(body.get("valor")));
         return ResponseEntity.ok().build();

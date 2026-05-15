@@ -4,6 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum Role {
+
+    SUPER_ADMIN("Super Administrador"),
     ADMIN("Administrador"),
     OPERADOR("Operador"),
     USER("Usuario"),
