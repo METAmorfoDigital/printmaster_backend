@@ -12,6 +12,7 @@ public class ConsumoTintaDTO {
     private String tipoTrabajo;
     private String rolloNombre;
     private String rolloCodigo;
+    private String rolloNumero;
     private String usuario;
     private LocalDateTime fecha;
     private String nota;

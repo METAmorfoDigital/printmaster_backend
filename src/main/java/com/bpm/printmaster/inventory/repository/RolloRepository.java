@@ -24,6 +24,9 @@ public interface RolloRepository extends JpaRepository<Rollo, Long> {
     @Query("SELECT MAX(r.codigo) FROM Rollo r WHERE r.codigo LIKE CONCAT(:prefijo, '-%')")
     Optional<String> findMaxCodigoByPrefijo(@Param("prefijo") String prefijo);
     
+    @Query("SELECT MAX(r.numero) FROM Rollo r WHERE r.tipoTrabajo = :tipo")
+    Optional<Integer> findMaxNumeroByTipo(@Param("tipo") String tipo);
+
     // Solo los que tienen stock disponible (metrosDisponibles > 0)
     List<Rollo> findByTipoTrabajoAndMetrosDisponiblesGreaterThan(
         String tipoTrabajo, BigDecimal minimo);

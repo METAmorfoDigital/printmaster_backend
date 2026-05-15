@@ -20,6 +20,9 @@ public class Rollo extends Material {
     @Column(unique = true)
     private String codigo; // ROLL-25-021
 
+    @Column(name = "numero")
+    private Integer numero;
+    
     @Column(name = "metros_disponibles")
     private BigDecimal metrosDisponibles; // metros restantes del rollo actual
 

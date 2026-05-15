@@ -54,6 +54,18 @@ public ResponseEntity<List<RolloDTO>> saveLote(@RequestBody RolloDTO dto) {
     return ResponseEntity.ok(rolloService.saveLote(dto));
 }
 
+@PatchMapping("/{id}/numero")
+public ResponseEntity<RolloDTO> updateNumero(
+        @PathVariable Long id,
+        @RequestParam Integer numero) {
+    return ResponseEntity.ok(rolloService.updateNumero(id, numero));
+}
+
+@GetMapping("/siguiente-numero/{tipoTrabajo}")
+public ResponseEntity<Integer> getSiguienteNumero(@PathVariable String tipoTrabajo) {
+    return ResponseEntity.ok(rolloService.getSiguienteNumero(tipoTrabajo));
+}
+
 
 @GetMapping("/por-tipo")
 public ResponseEntity<List<RolloDTO>> getByTipo(@RequestParam String tipoTrabajo) {

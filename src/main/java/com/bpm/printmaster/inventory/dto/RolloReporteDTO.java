@@ -10,7 +10,9 @@ import java.util.List;
 @NoArgsConstructor
 public class RolloReporteDTO {
     private String codigo;
+    private String numero;
     private String nombre;
+    private String marca;
     private BigDecimal largoTotal;
     private BigDecimal metrosUsados;
     private BigDecimal metrosDisponibles;

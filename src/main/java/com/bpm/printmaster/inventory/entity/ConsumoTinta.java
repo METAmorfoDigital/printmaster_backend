@@ -27,6 +27,9 @@ public class ConsumoTinta {
     private String rolloCodigo;    // código del rollo activo
 
     @Column(nullable = false)
+    private String rolloNumero;    // número del rollo activo
+
+    @Column(nullable = false)
     private String usuario;        // quien descontó
 
     @Column(nullable = false)

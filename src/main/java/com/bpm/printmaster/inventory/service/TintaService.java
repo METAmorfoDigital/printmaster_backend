@@ -48,7 +48,7 @@ public class TintaService {
         tinta.setCantidad(dto.getCantidad());
         tinta.setColor(dto.getColor());
         tinta.setMarca(dto.getMarca());
-        tinta.setTipoTinta(tipoTinta);
+        tinta.setTipoTrabajo(dto.getTipoTrabajo());        tinta.setTipoTinta(tipoTinta);
         tinta.setProveedor(proveedor);
 
         return toDTO(tintaRepository.save(tinta));
@@ -73,43 +73,41 @@ public class TintaService {
     return toDTO(tintaRepository.save(tinta));
 }
 
-    @Transactional
-    public TintaDTO descontarStock(Long id, String tipoTrabajo, String nota) {
-        Tinta tinta = tintaRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Tinta no encontrada"));
+@Transactional
+public TintaDTO descontarStock(Long id, String tipoTrabajo, String nota) {
+    Tinta tinta = tintaRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Tinta no encontrada"));
 
-        if (tinta.getCantidad() <= 0)
-            throw new RuntimeException("Sin stock disponible");
+    if (tinta.getCantidad() <= 0)
+        throw new RuntimeException("Sin stock disponible");
 
-        // buscar rollo activo del tipo de trabajo
-        Rollo rollo = rolloRepository
-            .findByTipoTrabajoAndMetrosDisponiblesGreaterThan(
-                tipoTrabajo, java.math.BigDecimal.ZERO)
-            .stream().findFirst()
-            .orElse(null);
+    // ✅ Rollo activo obligatorio — mismo criterio que OrdenProduccion
+    Rollo rollo = rolloRepository
+        .findByTipoTrabajoAndMetrosDisponiblesGreaterThan(
+            tipoTrabajo, java.math.BigDecimal.ZERO)
+        .stream().findFirst()
+        .orElseThrow(() -> new RuntimeException(
+            "No hay rollo activo para " + tipoTrabajo + ". Agrega un rollo antes de descontar tinta."));
 
-        // obtener usuario del contexto
-        String usuario = org.springframework.security.core.context
-            .SecurityContextHolder.getContext()
-            .getAuthentication().getName();
+    String usuario = org.springframework.security.core.context
+        .SecurityContextHolder.getContext()
+        .getAuthentication().getName();
 
-        // registrar consumo
-        ConsumoTinta consumo = ConsumoTinta.builder()
-            .tinta(tinta)
-            .tipoTrabajo(tipoTrabajo)
-            .rolloNombre(rollo != null ? rollo.getNombre() : "Sin rollo")
-            .rolloCodigo(rollo != null ? rollo.getCodigo() : "-")
-            .usuario(usuario)
-            .fecha(java.time.LocalDateTime.now())
-            .nota(nota)
-            .build();
-        consumoRepository.save(consumo);
+    ConsumoTinta consumo = ConsumoTinta.builder()
+        .tinta(tinta)
+        .tipoTrabajo(tipoTrabajo)
+        .rolloNombre(rollo.getNombre())
+        .rolloCodigo(rollo.getCodigo() != null ? rollo.getCodigo() : "S/C")
+        .rolloNumero(rollo.getNumero() != null ? rollo.getNumero().toString() : "S/N")
+        .usuario(usuario)
+        .fecha(java.time.LocalDateTime.now())
+        .nota(nota)
+        .build();
 
-        // descontar stock
-        tinta.setCantidad(tinta.getCantidad() - 1);
-        return toDTO(tintaRepository.save(tinta));
-    }
-
+    consumoRepository.save(consumo);
+    tinta.setCantidad(tinta.getCantidad() - 1);
+    return toDTO(tintaRepository.save(tinta));
+}
     public List<ConsumoTintaDTO> getConsumos(String tipoTrabajo, Long tintaId) {
     List<ConsumoTinta> lista = tintaId != null
         ? consumoRepository.findByTintaIdFetch(tintaId)
@@ -127,11 +125,14 @@ private ConsumoTintaDTO toConsumoDTO(ConsumoTinta c) {
         .tipoTrabajo(c.getTipoTrabajo())
         .rolloNombre(c.getRolloNombre())
         .rolloCodigo(c.getRolloCodigo())
+        .rolloNumero(c.getRolloNumero())
         .usuario(c.getUsuario())
         .fecha(c.getFecha())
         .nota(c.getNota())
         .build();
 }
+
+
 
 private TintaDTO toDTO(Tinta tinta) {
     TintaDTO dto = new TintaDTO();
@@ -141,6 +142,7 @@ private TintaDTO toDTO(Tinta tinta) {
     dto.setCantidad(tinta.getCantidad());
     dto.setColor(tinta.getColor());
     dto.setMarca(tinta.getMarca());
+    dto.setTipoTrabajo(tinta.getTipoTrabajo());
 
     if (tinta.getProveedor() != null)
         dto.setProveedorId(tinta.getProveedor().getId());

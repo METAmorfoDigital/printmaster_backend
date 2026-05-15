@@ -25,6 +25,9 @@ public class RolloDTO {
     private Integer cantidadLote; // cuántos rollos crear en lote
     
     private String codigo;
+
+    private Integer numero;
+
     private BigDecimal metrosDisponibles;
 
     @NotNull(message = "Precio requerido")

@@ -51,6 +51,12 @@ public class RolloService {
             .orElse(1);
     }
 
+    private int siguienteNumero(String tipoTrabajo, int fallback) {
+        return rolloRepository.findMaxNumeroByTipo(tipoTrabajo)
+            .map(n -> n + 1)
+            .orElse(fallback); // si no hay rollos aún, arranca desde el del código
+        }
+
     public List<RolloDTO> getAll() {
         return rolloRepository.findAll()
                 .stream().map(this::toDTO).toList();
@@ -78,7 +84,10 @@ public class RolloService {
         int anio = LocalDate.now().getYear() % 100;
         String prefijo = buildPrefijo(anio, dto.getTipoTrabajo());
         int siguiente = siguienteNumero(anio, dto.getTipoTrabajo());
+        int siguienteNum = siguienteNumero(dto.getTipoTrabajo(), siguiente); 
+        
         rollo.setCodigo(String.format("%s-%03d", prefijo, siguiente));
+        rollo.setNumero(dto.getNumero() != null ? dto.getNumero() : siguienteNum); 
 
         return toDTO(rolloRepository.save(rollo));
     }
@@ -97,8 +106,9 @@ public class RolloService {
 
         int anio = LocalDate.now().getYear() % 100;
         String prefijo = buildPrefijo(anio, dto.getTipoTrabajo());
-        int siguiente = siguienteNumero(anio, dto.getTipoTrabajo());
 
+        int siguiente = siguienteNumero(anio, dto.getTipoTrabajo());
+        int siguienteNum = siguienteNumero(dto.getTipoTrabajo(), siguiente);
         List<Rollo> rollos = new ArrayList<>();
 
         for (int i = 0; i < cantidad; i++) {
@@ -113,7 +123,9 @@ public class RolloService {
             rollo.setTipoRollo(tipoRollo);
             rollo.setProveedor(proveedor);
             rollo.setCodigo(String.format("%s-%03d", prefijo, siguiente));
-            siguiente++; // ← incrementar después de asignar
+            rollo.setNumero(siguienteNum);
+            siguiente++; 
+            siguienteNum++;
             rollos.add(rollo);
         }
 
@@ -200,6 +212,7 @@ public class RolloService {
 
         return RolloReporteDTO.builder()
             .codigo(rollo.getCodigo())
+            .numero(rollo.getNumero() != null ? rollo.getNumero().toString() : null)
             .nombre(rollo.getNombre())
             .largoTotal(rollo.getLargo())
             .metrosUsados(metrosUsados)
@@ -208,6 +221,13 @@ public class RolloService {
             .usos(usos)
             .build();
     }
+
+    public RolloDTO updateNumero(Long id, Integer nuevoNumero) {
+    Rollo rollo = rolloRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Rollo no encontrado"));
+    rollo.setNumero(nuevoNumero);
+    return toDTO(rolloRepository.save(rollo));
+}
 
     // ── Mapper ──
     private RolloDTO toDTO(Rollo r) {
@@ -220,11 +240,16 @@ public class RolloService {
             .metrosDisponibles(r.getMetrosDisponibles())
             .ancho(r.getAncho())
             .marca(r.getMarca())
+            .numero(r.getNumero())
             .tipoTrabajo(r.getTipoTrabajo())
             .tipoRolloId(r.getTipoRollo() != null ? r.getTipoRollo().getId() : null)
             .proveedorId(r.getProveedor() != null ? r.getProveedor().getId() : null)
             .build();
     }
 
-    
+    public Integer getSiguienteNumero(String tipoTrabajo) {
+    return rolloRepository.findMaxNumeroByTipo(tipoTrabajo)
+        .map(n -> n + 1)
+        .orElse(1);
+}
 }
