@@ -5,7 +5,7 @@ spring:
   datasource:
     url: ${DATABASE_URL:jdbc:mysql://localhost:3306/printmaster_erp?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/La_Paz}
     username: ${DATABASE_USER:root}
-    password: ${DATABASE_PASSWORD:SamMael#17.}
+    password: ${DATABASE_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     hikari:
